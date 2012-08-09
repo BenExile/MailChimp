@@ -32,16 +32,19 @@ class API
     }
     
     /**
-     * Return the campaigns manager
-     * @return \MailChimp\Manager\Campaigns
+     * Retrieve an API method manager
+     * If the requested manager does not exist, this method
+     * will create one and cache the object for later use
+     * @param string $manager Class name of manager to get
+     * @return \MailChimp\Manager
      */
-    public function getCampaignsManager()
+    public function getManager($manager)
     {
-        if (!isset($this->managers['campaignManager'])) {
-            $manager = new Manager\Campaigns($this->client);
-            $this->managers['campaignManager'] = $manager;
+        if (!isset($this->managers[$manager])) {
+            $class = '\\MailChimp\\Manager\\' . $manager;
+            $this->managers[$manager] = new $class($this->client);
         }
         
-        return $this->managers['campaignManager'];
+        return $this->managers[$manager];
     }
 }
