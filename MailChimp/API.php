@@ -7,6 +7,8 @@
  */
 namespace MailChimp;
 
+use MailChimp\Client\ClientInterface;
+
 class API
 {   
     /**
@@ -25,7 +27,7 @@ class API
      * Set the API client object
      * @param string $client API client object
      */
-    public function __construct(Client\ClientInterface $client)
+    public function __construct(ClientInterface $client)
     {   
         // Set the API client
         $this->client = $client;
