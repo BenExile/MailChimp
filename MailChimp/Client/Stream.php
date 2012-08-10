@@ -8,7 +8,7 @@
  */
 namespace MailChimp\Client;
 
-final class Stream extends ClientAbstract implements ClientInterface
+class Stream extends ClientAbstract implements ClientInterface
 {
     /**
      * Check that URL-aware fopen wrappers are available

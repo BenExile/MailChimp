@@ -8,7 +8,7 @@
  */
 namespace MailChimp\Client;
 
-final class Curl extends ClientAbstract implements ClientInterface
+class Curl extends ClientAbstract implements ClientInterface
 {
     /**
      * cURL options

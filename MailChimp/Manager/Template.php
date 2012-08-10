@@ -8,7 +8,7 @@
  */
 namespace MailChimp\Manager;
 
-final class Template implements ManagerInterface
+class Template implements ManagerInterface
 {
     /**
      * Set the API client

@@ -8,7 +8,7 @@
  */
 namespace MailChimp\Manager;
 
-final class Security implements ManagerInterface
+class Security implements ManagerInterface
 {
     /**
      * Set the API client

@@ -8,7 +8,7 @@
  */
 namespace MailChimp\Manager;
 
-final class CampaignReportData implements ManagerInterface
+class CampaignReportData implements ManagerInterface
 {
     /**
      * Set the API client

@@ -8,7 +8,7 @@
  */
 namespace MailChimp\Manager;
 
-final class Lists implements ManagerInterface
+class Lists implements ManagerInterface
 {
     /**
      * Set the API client

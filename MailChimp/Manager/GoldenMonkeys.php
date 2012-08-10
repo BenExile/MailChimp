@@ -8,7 +8,7 @@
  */
 namespace MailChimp\Manager;
 
-final class GoldenMonkeys implements ManagerInterface
+class GoldenMonkeys implements ManagerInterface
 {
     /**
      * Set the API client
