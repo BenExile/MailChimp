@@ -50,7 +50,7 @@ final class Curl extends ClientAbstract implements ClientInterface
         
         // Discard response headers
         $headerOffset = strpos($response, "\r\n\r\n") + 1;
-        $response = substr($response, $headerOffset);
+        $response = trim(substr($response, $headerOffset));
         
         // Parse the response and return
         return $this->parse($response);
