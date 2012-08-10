@@ -67,7 +67,7 @@ abstract class ClientAbstract
      * @param array $params Associative array of request parameters
      * @return string API request URL
      */
-    public function prepare($method, $params)
+    public function prepare($method, array $params = array())
     {
         // Define the default parameters
         $default = array(
@@ -95,7 +95,7 @@ abstract class ClientAbstract
      */
     protected function parse($response)
     {
-        if (!$response = json_decode($response)) {
+        if (($response = json_decode($response)) === false) {
             $error = json_last_error();
             $message = 'Unable to decode response. Error: ' . $this->jsonErrors[$error];
             throw new \MailChimp\Exception($message);
