@@ -12,7 +12,7 @@ require_once(dirname(__FILE__) . '/../bootstrap.php');
 // Retrieve the template manager object
 $templateManager = $mailchimp->getManager('Template');
 
-$id = 26517; // ID of the template you wish to pull info for
+$id = 0; // ID of the template you wish to pull info for
 
 // Pull info for the template with ID # $id
 $info = $templateManager->templateInfo($id);
