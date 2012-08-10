@@ -26,8 +26,8 @@ class Curl extends ClientAbstract implements ClientInterface
      */
     public function __construct($key)
     {
-        if (!extension_loaded('cURL')) {
-            throw new \MailChimp\Exception('The cURL client requires the cURL extension');
+        if (!extension_loaded('curl')) {
+            throw new \MailChimp\Exception('The cURL client requires the CURL extension');
         }
         
         // Call the parent constructor

@@ -8,13 +8,22 @@
  */
 namespace MailChimp\Manager;
 
+use MailChimp\Manager\ManagerInterface;
+use MailChimp\Client\ClientInterface;
+
 class Folder implements ManagerInterface
 {
+    /**
+     * API client
+     * @var null|ClientInterface
+     */
+    protected $client = null;
+    
     /**
      * Set the API client
      * @param unknown_type $client
      */
-    public function __construct(\MailChimp\Client\ClientInterface $client)
+    public function __construct(ClientInterface $client)
     {
         $this->client = $client;
     }
