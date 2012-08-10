@@ -47,4 +47,15 @@ class API
         
         return $this->managers[$manager];
     }
+    
+    
+    /**
+     * Get the template manager
+     
+     * @return \MailChimp\Manager\Template
+     */
+    public function getTemplateManager() {
+        return $this->getManager('Template');
+    }
+    
 }
