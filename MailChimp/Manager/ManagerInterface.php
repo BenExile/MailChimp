@@ -13,12 +13,6 @@ use MailChimp\Client\ClientInterface;
 interface ManagerInterface
 {   
     /**
-     * API client
-     * @var null|ClientInterface
-     */
-    protected $client = null;
-    
-    /**
      * Set the API client
      * @param \MailChimp\Client\ClientInterface $client
      */
