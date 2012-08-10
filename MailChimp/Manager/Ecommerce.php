@@ -8,13 +8,19 @@
  */
 namespace MailChimp\Manager;
 
-final class Ecommerce implements ManagerInterface
+use MailChimp\Manager\ManagerInterface;
+use MailChimp\Client\ClientInterface;
+
+class Ecommerce implements ManagerInterface
 {
+    
+    protected $client = null;
+    
     /**
      * Set the API client
      * @param unknown_type $client
      */
-    public function __construct(\MailChimp\Client\ClientInterface $client)
+    public function __construct(ClientInterface $client)
     {
         $this->client = $client;
     }
