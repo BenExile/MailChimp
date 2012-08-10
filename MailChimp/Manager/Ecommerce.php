@@ -12,7 +12,7 @@ use MailChimp\Manager\ManagerInterface;
 use MailChimp\Client\ClientInterface;
 
 class Ecommerce implements ManagerInterface
-{
+{    
     /**
      * API client
      * @var null|ClientInterface
