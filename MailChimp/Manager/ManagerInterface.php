@@ -8,11 +8,13 @@
  */
 namespace MailChimp\Manager;
 
+use MailChimp\Client\ClientInterface;
+
 interface ManagerInterface
 {   
     /**
      * Set the API client
      * @param \MailChimp\Client\ClientInterface $client
      */
-    public function __construct(\MailChimp\Client\ClientInterface $client);
+    public function __construct(ClientInterface $client);
 }
