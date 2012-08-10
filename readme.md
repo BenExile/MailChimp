@@ -27,6 +27,7 @@ Please see the [examples provided][].
 [MailChimp API]: http://apidocs.mailchimp.com/api/1.3/
 [PSR-0 standard]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [MIT License]: https://github.com/BenTheDesigner/MailChimp/blob/master/mit-license.md
+[PHP JSON]: http://php.net/manual/en/book.json.php
 [PHP OpenSSL]: http://php.net/manual/en/book.openssl.php
 [PHP cURL]: http://www.php.net/manual/en/book.curl.php
 [allow_url_fopen]: http://php.net/manual/en/filesystem.configuration.php
