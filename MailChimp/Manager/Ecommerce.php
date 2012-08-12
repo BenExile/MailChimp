@@ -8,10 +8,9 @@
  */
 namespace MailChimp\Manager;
 
-use MailChimp\Manager\ManagerInterface;
 use MailChimp\Client\ClientInterface;
 
-class Ecommerce extends ManagerAbstract implements ManagerInterface
+class Ecommerce extends ManagerAbstract
 {    
     /**
      * Set the API client

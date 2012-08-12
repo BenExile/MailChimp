@@ -8,7 +8,7 @@
  */
 namespace MailChimp\Manager;
 
-abstract class ManagerAbstract
+abstract class ManagerAbstract implements ManagerInterface
 {
     /**
      * API client

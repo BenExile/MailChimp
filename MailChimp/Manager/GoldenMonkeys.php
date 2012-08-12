@@ -8,10 +8,9 @@
  */
 namespace MailChimp\Manager;
 
-use MailChimp\Manager\ManagerInterface;
 use MailChimp\Client\ClientInterface;
 
-class GoldenMonkeys extends ManagerAbstract implements ManagerInterface
+class GoldenMonkeys extends ManagerAbstract
 {
     /**
      * Set the API client

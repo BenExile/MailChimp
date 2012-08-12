@@ -8,10 +8,9 @@
  */
 namespace MailChimp\Manager;
 
-use MailChimp\Manager\ManagerInterface;
 use MailChimp\Client\ClientInterface;
 
-class Helper extends ManagerAbstract implements ManagerInterface
+class Helper extends ManagerAbstract
 {
     /**
      * Set the API client
