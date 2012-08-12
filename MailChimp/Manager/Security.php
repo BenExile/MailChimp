@@ -11,14 +11,8 @@ namespace MailChimp\Manager;
 use MailChimp\Manager\ManagerInterface;
 use MailChimp\Client\ClientInterface;
 
-class Security implements ManagerInterface
+class Security extends ManagerAbstract implements ManagerInterface
 {
-    /**
-     * API client
-     * @var null|ClientInterface
-     */
-    protected $client = null;
-    
     /**
      * Set the API client
      * @param unknown_type $client
