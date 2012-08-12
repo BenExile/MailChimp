@@ -14,7 +14,7 @@ class Helper extends ManagerAbstract
 {
     /**
      * Set the API client
-     * @param unknown_type $client
+     * @param \MailChimp\Client\ClientInterface $client
      */
     public function __construct(ClientInterface $client)
     {
