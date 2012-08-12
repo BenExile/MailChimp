@@ -24,10 +24,19 @@ abstract class ClientAbstract
     
     /**
      * Use SSL Endpoint
-     * Ignored if OpenSSL is not loaded
+     * If OpenSSL is not loaded, requests will be sent to the API
+     * server via a non-secure connection (unless SSL-only mode is enabled)
      * @var boolean Default: true
      */
     private $useSSL = true;
+    
+    /**
+     * Strictly SSL requests only
+     * If OpenSSL is disabled and this variable is true, the 
+     * application will not send any requests to the API server
+     * @var boolean Default: false
+     */
+    private $sslOnly = false;
     
     /**
      * User API key
@@ -57,7 +66,14 @@ abstract class ClientAbstract
         // Set the API endpoint
         $this->key = $key;
         $prefix = substr($this->key, strpos($this->key, '-') + 1);
-        $protocol = ($this->useSSL && extension_loaded('OpenSSL')) ? 'https' : 'http';
+        $protocol = ($this->useSSL && extension_loaded('openssl')) ? 'https' : 'http';
+        
+        // If SSL-only is enabled, but OpenSSL is not, throw an Exception
+        if ($protocol == 'http' && $this->sslOnly) {
+            $message = 'The OpenSSL extension is required when SSL-only mode is enabled';
+            throw new \MailChimp\Exception($message);
+        }
+        
         $this->endpoint = sprintf($this->endpoint, $protocol, $prefix, $this->version);
     }
     
