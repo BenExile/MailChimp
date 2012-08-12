@@ -8,6 +8,7 @@
 namespace MailChimp;
 
 use MailChimp\Client\ClientInterface;
+use MailChimp\Manager\ManagerInterface;
 
 class API
 {   
@@ -43,8 +44,16 @@ class API
     public function getManager($manager)
     {
         if (!isset($this->managers[$manager])) {
-            $class = '\\MailChimp\\Manager\\' . $manager;
-            $this->managers[$manager] = new $class($this->client);
+            $class = "\\MailChimp\\Manager\\" . $manager;
+            $object = new $class($this->client);
+            
+            // Ensure the manager object implements the manager interface
+            if (!$object instanceof ManagerInterface) {
+                $message = 'The manager `' . $manager . '` must implement ManagerInterface';
+                throw new \MailChimp\Exception($message); 
+            } else {
+                $this->managers[$manager] = $object;
+            }
         }
         
         return $this->managers[$manager];
