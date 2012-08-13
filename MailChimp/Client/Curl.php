@@ -25,16 +25,18 @@ class Curl extends ClientAbstract implements ClientInterface
     
     /**
      * Check that cURL is enabled
+     * @param string $key User API key
+     * @param bool $secureOnly Only allow API calls to be sent via a secure connection
      * @throws \MailChimp\Exception
      */
-    public function __construct($key)
+    public function __construct($key, $secureOnly = false)
     {
         if (!extension_loaded('curl')) {
             throw new \MailChimp\Exception('The cURL client requires the CURL extension');
         }
         
         // Call the parent constructor
-        parent::__construct($key);
+        parent::__construct($key, $secureOnly);
     }
     
     /**
