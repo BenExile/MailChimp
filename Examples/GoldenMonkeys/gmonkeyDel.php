@@ -13,7 +13,7 @@ require_once(dirname(__FILE__) . '/../bootstrap.php');
 $gmonkeyManager = $mailchimp->getManager('GoldenMonkeys');
 
 $listID = 0; // List ID to connect to
-$email = 'ben@handcraftedbyben.co.uk';
+$email = 'root@localhost';
 
 // Remove a Golden Monkey
 $add = $gmonkeyManager->gmonkeyDel($listID, $email);

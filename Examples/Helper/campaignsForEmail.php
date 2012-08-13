@@ -12,7 +12,7 @@ require_once(dirname(__FILE__) . '/../bootstrap.php');
 // Retrieve the template manager object
 $helperManager = $mailchimp->getManager('Helper');
 
-$email = 'ben@handcraftedbyben.co.uk'; // Email address to query
+$email = 'root@localhost'; // Email address to query
 $listID = null; // Limit to specific list
 
 // Get the campaigns sent to this email address

@@ -13,7 +13,7 @@ require_once(dirname(__FILE__) . '/../bootstrap.php');
 $helperManager = $mailchimp->getManager('Helper');
 
 // Get all list IDs an email address is subscribed to
-$email = 'ben@handcraftedbyben.co.uk';
+$email = 'root@localhost';
 $lists = $helperManager->listsForEmail($email);
 
 // Dump the output (array)
