@@ -109,7 +109,7 @@ abstract class ClientAbstract
             $error = json_last_error();
             $message = 'Unable to decode response. Error: ' . $this->jsonErrors[$error];
             throw new \MailChimp\Exception($message);
-        } elseif (isset($response->error)) {
+        } elseif (isset($response->error, $response->code)) {
             throw new \MailChimp\Exception($response->error, $response->code);
         } else {
             return $response;
