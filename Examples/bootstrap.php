@@ -23,5 +23,7 @@ spl_autoload_register(function($class){
 
 $apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-XXX';
 
-$client = new \MailChimp\Client\Curl($apiKey);
+$sslOnly = false; // If true, API calls will only be made if OpenSSL is available
+$client = new \MailChimp\Client\Curl($apiKey, $sslOnly);
+
 $mailchimp = new \MailChimp\API($client);
