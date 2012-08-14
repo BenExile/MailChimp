@@ -39,14 +39,18 @@ You can now run the examples :)
 
 ## Method Managers
 
-Managers handle the separation of API methods into the [categories][] specified by MailChimp. To access the methods provided by a manager you need to request the manager, by name, from the manager factory (\MailChimp\API\getManager()).
+Managers handle the separation of API methods into the [categories][] specified by MailChimp.
+
+#### Calling API Methods
+
+To access the methods provided by a manager you need to request the manager, by name, from the manager factory (\MailChimp\API\getManager()).
 
 ```
 // Get the Helper manager
 $helperManager = $mailchimp->getManager('Helper');
 ```
 
-Once you have the manager instance, you can call the API methods it provides
+Once you have the manager instance, you can call the API methods it provides.
 
 ```
 // Ping the MailChimp API server
