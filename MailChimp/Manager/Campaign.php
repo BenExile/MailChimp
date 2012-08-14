@@ -70,7 +70,9 @@ class Campaign extends ManagerAbstract
     
     /**
      * Attach ecommerce order information to a campaign
-     * @throws \MailChimp\Exception
+     * @see \MailChimp\Ecommerce\Order
+     * @param OrderInterface $order An order object ready to be prepared
+     * @return bool
      */
     public function campaignEcommOrderAdd(OrderInterface $order)
     {
