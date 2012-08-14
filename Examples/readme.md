@@ -37,6 +37,22 @@ $mailchimp = new \MailChimp\API($client);
 
 You can now run the examples :)
 
+## Method Managers
+
+Managers handle the separation of API methods into the [categories][] specified by MailChimp. To access the methods provided by a manager you need to request the manager, by name, from the manager factory (\MailChimp\API\getManager()).
+
+```
+// Get the Helper manager
+$helperManager = $mailchimp->getManager('Helper');
+```
+
+Once you have the manager instance, you can call the API methods it provides
+
+```
+// Ping the MailChimp API server
+echo $helperManager->ping();
+```
+
 [bootstrap.php]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.php
 [add an API key]: https://admin.mailchimp.com/account/api/
 [placeholder]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.php#L24
@@ -44,4 +60,5 @@ You can now run the examples :)
 [Stream]: https://github.com/BenTheDesigner/MailChimp/blob/master/MailChimp/Client/Stream.php
 [$sslOnly]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.php#L26
 [$client]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.php#L27
-[$mailchimp]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.php#L29
+[$mailchimp]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.p hp#L29
+[categories]: http://apidocs.mailchimp.com/api/1.3/#method-&-error-code-docs
