@@ -9,6 +9,7 @@
 namespace MailChimp\Manager;
 
 use MailChimp\Client\ClientInterface;
+use MailChimp\Ecommerce\OrderInterface;
 
 class Campaign extends ManagerAbstract
 {
@@ -72,9 +73,19 @@ class Campaign extends ManagerAbstract
      * @todo Implement this method
      * @throws \MailChimp\Exception
      */
-    public function campaignEcommOrderAdd()
+    public function campaignEcommOrderAdd(OrderInterface $order)
     {
-        throw new \MailChimp\Exception('This method has not yet been implemented');
+        // Call prepare() on the order to retrieve the request parameters
+        $orderParams = $order->prepare();
+        
+        // Prepare the parameters array
+        $params = array('order' => $orderParams);
+        
+        // Build the request URL
+        $request = $this->client->prepare('campaignEcommOrderAdd', $params);
+        
+        // Return the API response
+        return $this->client->request($request);
     }
     
     /**
