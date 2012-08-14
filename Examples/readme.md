@@ -12,7 +12,7 @@ Once you have generated an API key, you can replace the [placeholder][] in boots
 
 This library provides 2 client adapters, [cURL][] and [Stream][]. These are interchangeable and provide the same functionality via different mechanisms. Select the adapter most appropriate to you (i.e. If you don't have cURL installed, use Stream).
 
-This library makes calls over HTTP by default where possible (OpenSSL is enabled). If you require that your application ONLY makes calls via a secure connection, set [$sslOnly][] to true. Where SSL-only mode is enabled and OpenSSL is not, a \MailChimp\Exception will be thrown.
+This library makes calls over HTTPS by default where possible (OpenSSL is enabled). If you require that your application ONLY makes calls via a secure connection, set [$sslOnly][] to true. Where SSL-only mode is enabled and OpenSSL is not, a \MailChimp\Exception will be thrown.
 
 
 Next, create your HTTP client ([$client][]):
