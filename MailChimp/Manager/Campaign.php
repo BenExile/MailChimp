@@ -148,7 +148,7 @@ class Campaign extends ManagerAbstract
      */
     public function campaignSchedule($id, $scheduleTime, $scheduleTimeB = null)
     {
-        // @todo Improve the date format pattern to detect invalid dates
+        // Date format pattern
         $pattern = '/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/';
         
         // Ensure schedule time(s) are formatted correctly
