@@ -60,5 +60,5 @@ echo $helperManager->ping();
 [Stream]: https://github.com/BenTheDesigner/MailChimp/blob/master/MailChimp/Client/Stream.php
 [$sslOnly]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.php#L26
 [$client]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.php#L27
-[$mailchimp]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.p hp#L29
+[$mailchimp]: https://github.com/BenTheDesigner/MailChimp/blob/master/Examples/bootstrap.php#L29
 [categories]: http://apidocs.mailchimp.com/api/1.3/#method-&-error-code-docs
