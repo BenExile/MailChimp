@@ -2,8 +2,9 @@
 
 /**
  * Ecommerce order object
- * Prepares the parameters that are required by
- * the campaignEcommOrderAdd() API call
+ * This class does not provide any means of calculating tax or shipping - this
+ * will be done by your ecommerce platform. This class simply handles the values
+ * passed to it and prepares them for use in a campaignEcommOrderAdd() API call
  * @author Ben Tadiar <ben@handcraftedbyben.co.uk>
  * @package MailChimp
  * @subpackage Object
