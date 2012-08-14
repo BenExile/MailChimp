@@ -1,6 +1,6 @@
 ## Configuration
 
-The instructions below describe how to configure [bootstrap.php][] to enable you to run the examples provided in each of the API category folders.
+The instructions below describes how to configure [bootstrap.php][] to enable you to run the examples provided in each of the API category folders.
 
 #### Setting Your API Key
 
