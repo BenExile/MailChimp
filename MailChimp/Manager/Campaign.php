@@ -76,10 +76,7 @@ class Campaign extends ManagerAbstract
     public function campaignEcommOrderAdd(OrderInterface $order)
     {
         // Call prepare() on the order to retrieve the request parameters
-        $orderParams = $order->prepare();
-        
-        // Prepare the parameters array
-        $params = array('order' => $orderParams);
+        $params = array('order' => $order->prepare());
         
         // Build the request URL
         $request = $this->client->prepare('campaignEcommOrderAdd', $params);
