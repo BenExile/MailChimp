@@ -42,8 +42,8 @@ class Order implements OrderInterface
     protected $storeName = null;
     
     /**
-     * 
-     * @var unknown_type
+     * Date for the order
+     * @var string
      */
     protected $date = null;
     
