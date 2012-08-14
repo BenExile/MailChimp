@@ -41,7 +41,7 @@ class EcommerceOrder extends EcommerceOrderAbstract
      * @param double $cost The cost of a single item, not the total cost of the line
      * @param int $qty The quantity of the item ordered
      * @param string $sku The store's internal SKU for the product ($prodID is used if this is not passed)
-     * @param int $lineNo  Line number of the item on the order (Auto-generated if not passed)
+     * @param int $lineNo Line number of the item on the order (Auto-generated if not passed)
      * @return void
      */
     public function addItem($prodID, $prodName, $catID, $catName, $cost, $qty, $sku = null, $lineNo = null)
