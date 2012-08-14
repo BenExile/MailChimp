@@ -4,11 +4,11 @@
  * MailChimp Ecommerce Order Interface
  * @author Ben Tadiar <ben@handcraftedbyben.co.uk>
  * @package MailChimp
- * @subpackage Ecommerce
+ * @subpackage Object
  */
-namespace MailChimp\Ecommerce;
+namespace MailChimp\Object;
 
-interface OrderInterface
+interface EcommerceOrderInterface
 {   
     
 }

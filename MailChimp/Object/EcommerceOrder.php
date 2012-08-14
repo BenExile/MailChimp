@@ -5,11 +5,11 @@
  * that are required by the campaignEcommOrderAdd() API call
  * @author Ben Tadiar <ben@handcraftedbyben.co.uk>
  * @package MailChimp
- * @subpackage Ecommerce
+ * @subpackage Object
  */
-namespace MailChimp\Ecommerce;
+namespace MailChimp\Object;
 
-class Order implements OrderInterface
+class EcommerceOrder implements EcommerceOrderInterface
 {
     /**
      * The store's internal ID for the order
