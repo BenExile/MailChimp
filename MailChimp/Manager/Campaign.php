@@ -72,6 +72,7 @@ class Campaign extends ManagerAbstract
     /**
      * Attach ecommerce order information to a campaign
      * @see \MailChimp\Ecommerce\Order
+     * @link http://apidocs.mailchimp.com/api/1.3/campaignecommorderadd.func.php
      * @param OrderInterface $order An order object ready to be prepared
      * @return bool
      */
@@ -177,6 +178,7 @@ class Campaign extends ManagerAbstract
     
     /**
      * Allows one to test their segmentation rules before creating a campaign using them
+     * @link http://apidocs.mailchimp.com/api/1.3/campaignsegmenttest.func.php
      * @param string $listID The list to test segmentation on
      * @param \MailChimp\Object\Segmentation\RuleSetInterface $ruleSet A ruleset object ready to be prepared
      * @return int The total number of subscribers matching your segmentation options
