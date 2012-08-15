@@ -1,0 +1,20 @@
+{
+    "name": "benthedesigner/mailchimp",
+    "type": "library",
+    "description": "PHP 5.3 SDK for the MailChimp API",
+    "keywords": ["MailChimp, API"],
+    "homepage": "https://github.com/BenTheDesigner/MailChimp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Tadiar",
+            "email": "ben@handcraftedbyben.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {"MailChimp": ""}
+    }
+}
