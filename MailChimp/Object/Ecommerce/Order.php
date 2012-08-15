@@ -98,10 +98,12 @@ class Order extends OrderAbstract
      */
     public function prepare()
     {
+        // Check the order has at least one item
         if (empty($this->items)) {
             throw new \MailChimp\Exception('An order must have at least one item');
         }
         
+        // Prepare the parameters array
         $params = array(
             'id' => $this->orderID,
             'email_id' => $this->emailID,
@@ -115,6 +117,7 @@ class Order extends OrderAbstract
             'items' => $this->items,
         );
         
+        // Return the ecommerce order
         return $params;
     }
 }
