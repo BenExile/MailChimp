@@ -10,6 +10,7 @@ namespace MailChimp\Manager;
 
 use MailChimp\Client\ClientInterface;
 use MailChimp\Object\Ecommerce\OrderInterface;
+use MailChimp\Object\Segmentation\RuleSet;
 
 class Campaign extends ManagerAbstract
 {
@@ -176,12 +177,20 @@ class Campaign extends ManagerAbstract
     
     /**
      * Allows one to test their segmentation rules before creating a campaign using them
-     * @todo Implement this method
-     * @throws \MailChimp\Exception
+     * @param string $listID The list to test segmentation on
+     * @param \MailChimp\Object\Segmentation\RuleSet $ruleSet A ruleset object ready to be prepared
+     * @return int The total number of subscribers matching your segmentation options
      */
-    public function campaignSegmentTest()
+    public function campaignSegmentTest($listID, RuleSet $ruleSet)
     {
-        throw new \MailChimp\Exception('This method has not yet been implemented');
+        // Prepare the parameters array
+        $params = array('list_id' => $listID, 'options' => $ruleSet->prepare());
+        
+        // Build the request URL
+        $request = $this->client->prepare('campaignSegmentTest', $params);
+        
+        // Return the API response
+        return $this->client->request($request);
     }
     
     /**
