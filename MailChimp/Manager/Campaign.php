@@ -9,7 +9,7 @@
 namespace MailChimp\Manager;
 
 use MailChimp\Client\ClientInterface;
-use MailChimp\Object\EcommerceOrderInterface;
+use MailChimp\Object\Ecommerce\OrderInterface;
 
 class Campaign extends ManagerAbstract
 {
@@ -74,7 +74,7 @@ class Campaign extends ManagerAbstract
      * @param OrderInterface $order An order object ready to be prepared
      * @return bool
      */
-    public function campaignEcommOrderAdd(EcommerceOrderInterface $order)
+    public function campaignEcommOrderAdd(OrderInterface $order)
     {
         // Call prepare() on the order to retrieve the request parameters
         $params = array('order' => $order->prepare());

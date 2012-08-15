@@ -18,7 +18,7 @@ $emailID = ''; // Email ID (mc_eid) to attach order to
 $storeID = ''; // Unique, user-defined ID for the store sending the order in
 
 // Create an ecommerce order object
-$order = new \MailChimp\Object\EcommerceOrder($orderID, $campaignID, $emailID, $storeID);
+$order = new \MailChimp\Object\Ecommerce\Order($orderID, $campaignID, $emailID, $storeID);
 
 // Define item options
 $productID = 123;
