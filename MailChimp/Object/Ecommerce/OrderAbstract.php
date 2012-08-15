@@ -4,11 +4,11 @@
  * Abstract ecommerce order class
  * @author Ben Tadiar <ben@handcraftedbyben.co.uk>
  * @package MailChimp
- * @subpackage Object
+ * @subpackage Ecommerce
  */
-namespace MailChimp\Object;
+namespace MailChimp\Object\Ecommerce;
 
-class EcommerceOrderABstract implements EcommerceOrderInterface
+class OrderABstract implements OrderInterface
 {
     /**
      * The store's internal ID for the order

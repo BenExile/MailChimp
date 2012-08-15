@@ -5,11 +5,11 @@
  * @todo Specify methods
  * @author Ben Tadiar <ben@handcraftedbyben.co.uk>
  * @package MailChimp
- * @subpackage Object
+ * @subpackage Ecommerce
  */
-namespace MailChimp\Object;
+namespace MailChimp\Object\Ecommerce;
 
-interface EcommerceOrderInterface
+interface OrderInterface
 {   
     
 }

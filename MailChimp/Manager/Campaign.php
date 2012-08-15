@@ -9,7 +9,8 @@
 namespace MailChimp\Manager;
 
 use MailChimp\Client\ClientInterface;
-use MailChimp\Object\EcommerceOrderInterface;
+use MailChimp\Object\Ecommerce\OrderInterface;
+use MailChimp\Object\Segmentation\RuleSetInterface;
 
 class Campaign extends ManagerAbstract
 {
@@ -71,10 +72,11 @@ class Campaign extends ManagerAbstract
     /**
      * Attach ecommerce order information to a campaign
      * @see \MailChimp\Ecommerce\Order
+     * @link http://apidocs.mailchimp.com/api/1.3/campaignecommorderadd.func.php
      * @param OrderInterface $order An order object ready to be prepared
      * @return bool
      */
-    public function campaignEcommOrderAdd(EcommerceOrderInterface $order)
+    public function campaignEcommOrderAdd(OrderInterface $order)
     {
         // Call prepare() on the order to retrieve the request parameters
         $params = array('order' => $order->prepare());
@@ -176,12 +178,21 @@ class Campaign extends ManagerAbstract
     
     /**
      * Allows one to test their segmentation rules before creating a campaign using them
-     * @todo Implement this method
-     * @throws \MailChimp\Exception
+     * @link http://apidocs.mailchimp.com/api/1.3/campaignsegmenttest.func.php
+     * @param string $listID The list to test segmentation on
+     * @param \MailChimp\Object\Segmentation\RuleSetInterface $ruleSet A ruleset object ready to be prepared
+     * @return int The total number of subscribers matching your segmentation options
      */
-    public function campaignSegmentTest()
+    public function campaignSegmentTest($listID, RuleSetInterface $ruleSet)
     {
-        throw new \MailChimp\Exception('This method has not yet been implemented');
+        // Prepare the parameters array
+        $params = array('list_id' => $listID, 'options' => $ruleSet->prepare());
+        
+        // Build the request URL
+        $request = $this->client->prepare('campaignSegmentTest', $params);
+        
+        // Return the API response
+        return $this->client->request($request);
     }
     
     /**

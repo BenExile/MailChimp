@@ -7,11 +7,11 @@
  * passed to it and prepares them for use in a campaignEcommOrderAdd() API call
  * @author Ben Tadiar <ben@handcraftedbyben.co.uk>
  * @package MailChimp
- * @subpackage Object
+ * @subpackage Ecommerce
  */
-namespace MailChimp\Object;
+namespace MailChimp\Object\Ecommerce;
 
-class EcommerceOrder extends EcommerceOrderAbstract
+class Order extends OrderAbstract
 {
     /**
      * Set the order ID, email of subscriber to attach the order to and order date
@@ -98,10 +98,12 @@ class EcommerceOrder extends EcommerceOrderAbstract
      */
     public function prepare()
     {
+        // Check the order has at least one item
         if (empty($this->items)) {
             throw new \MailChimp\Exception('An order must have at least one item');
         }
         
+        // Prepare the parameters array
         $params = array(
             'id' => $this->orderID,
             'email_id' => $this->emailID,
@@ -115,6 +117,7 @@ class EcommerceOrder extends EcommerceOrderAbstract
             'items' => $this->items,
         );
         
+        // Return the ecommerce order
         return $params;
     }
 }
