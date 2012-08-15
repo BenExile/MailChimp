@@ -10,7 +10,7 @@
  */
 namespace MailChimp\Object\Segmentation;
 
-class RuleSet
+class RuleSet implements RuleSetInterface
 {
     /**
      * Constant for OR (any) match mode
