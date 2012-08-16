@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Example of the campaignMembers() API call
- * @link http://apidocs.mailchimp.com/api/1.3/campaignmembers.func.php
+ * Example of the campaignAbuseReports() API call
+ * @link http://apidocs.mailchimp.com/api/1.3/campaignabusereports.func.php
  * @author Ben Tadiar <ben@handcraftedbyben.co.uk>
  */
 
