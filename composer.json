@@ -8,7 +8,8 @@
     "authors": [
         {
             "name": "Ben Tadiar",
-            "email": "ben@handcraftedbyben.co.uk"
+            "email": "ben@handcraftedbyben.co.uk",
+            "role": "Developer"
         }
     ],
     "require": {
