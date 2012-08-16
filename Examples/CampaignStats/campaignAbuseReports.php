@@ -12,7 +12,7 @@ require_once(dirname(__FILE__) . '/../bootstrap.php');
 // Retrieve the campaign stats object
 $statsManager = $mailchimp->getManager('CampaignStats');
 
-$id = '5dea81a67d'; // Specify the campaign ID
+$id = ''; // Specify the campaign ID
 
 // Pull reports for the campaign with ID # $id
 $reports = $statsManager->campaignAbuseReports($id);
