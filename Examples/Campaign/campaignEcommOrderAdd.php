@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Example of the campaignContent() API call
+ * Example of the campaignEcommOrderAdd() API call
  * @link http://apidocs.mailchimp.com/api/1.3/campaigncontent.func.php
  * @author Ben Tadiar <ben@handcraftedbyben.co.uk>
  */
