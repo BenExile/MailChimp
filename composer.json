@@ -2,7 +2,7 @@
     "name": "benthedesigner/mailchimp",
     "type": "library",
     "description": "PHP 5.3 SDK for the MailChimp API",
-    "keywords": ["MailChimp, API"],
+    "keywords": ["MailChimp", "API"],
     "homepage": "https://github.com/BenTheDesigner/MailChimp",
     "license": "MIT",
     "authors": [
