@@ -10,7 +10,7 @@ Unless otherwise stated, all components of the SDK are licensed under the [MIT L
 
 ### Requirements
 
-* PHP >= 5.3.0
+* PHP >= 5.3.3
 * [PHP JSON][]
 * [PHP OpenSSL][] (If you wish to make API calls over HTTPS)
 * [PHP cURL][] (\MailChimp\Client\Curl)
