@@ -5,7 +5,7 @@ This project is currently in development. It is strongly advised that you do not
 ### Introduction
 
 This repository contains a PHP SDK that provides access to the [MailChimp API][] (version 1.3).
-The SDK conforms to the [PSR-0 standard][] for autoloading interoperability and requires PHP >= 5.3.0.
+The SDK conforms to the [PSR-0 standard][] for autoloading interoperability and requires PHP >= 5.3.3.
 Unless otherwise stated, all components of the SDK are licensed under the [MIT License][].
 
 ### Requirements
